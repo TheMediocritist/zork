@@ -18,8 +18,8 @@ MANDIR = /usr/share/man
 # more option 1: use the termcap routines.  On some systems the LIBS
 # variable may need to be set to -lcurses.  On some it may need to
 # be /usr/lib/termcap.o.  These options are commented out below.
-LIBS = -ltermcap
-TERMFLAG =
+# LIBS = -ltermcap
+# TERMFLAG =
 # LIBS = -lcurses
 # LIBS = /usr/lib/termcap.o
 
@@ -33,7 +33,11 @@ TERMFLAG =
 # LIBS =
 # TERMFLAG = -DMORE_24
 
-# more option 4: don't use the more facility at all
+# more option 4: assume all terminals have 24 rows
+ LIBS =
+ TERMFLAG = -DMORE_15
+
+# more option 5: don't use the more facility at all
 # LIBS =
 # TERMFLAG = -DMORE_NONE
 
