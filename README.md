@@ -1,3 +1,5 @@
+Note: original displays 73 characters per line (we need 50)
+
 ```
 Welcome to Dungeon.			This version created 11-MAR-91.
 You are in an open field west of a big white house with a boarded
