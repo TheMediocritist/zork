@@ -88,6 +88,7 @@ integer maxval;
 
 #ifndef MORE_NONE
 #ifndef MORE_24
+#ifndef MORE_15
 #ifndef MORE_TERMCAP
 #ifndef MORE_TERMINFO
 #ifndef MORE_AMOS
@@ -103,6 +104,7 @@ integer maxval;
 #endif /* ! MORE_AMOS */
 #endif /* ! MORE_TERMINFO */
 #endif /* ! MORE_TERMCAP */
+#endif /* ! MORE_15 */
 #endif /* ! MORE_24 */
 #endif /* ! MORE_NONE */
 
@@ -150,6 +152,11 @@ void more_init()
     crows = 24;
 
 #else /* ! MORE_24 */
+#ifdef MORE_15
+
+    crows = 15;
+
+#else /* ! MORE_15 */
 #ifdef MORE_TERMCAP
 
     char buf[2048];
@@ -193,6 +200,7 @@ void more_init()
 #endif /* ! MORE_AMOS */
 #endif /* ! MORE_TERMINFO */
 #endif /* ! MORE_TERMCAP */
+#endif /* ! MORE_15 */
 #endif /* ! MORE_24 */
 #endif /* ! MORE_NONE */
 }
